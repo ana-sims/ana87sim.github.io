@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Your Star Sign</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Indie Flower", cursive;
+        background: rgb(154, 228, 255);
+        background: linear-gradient(
+          177deg,
+          rgba(154, 228, 255, 0.9290091036414566) 11%,
+          rgba(241, 154, 234, 0.8085609243697479) 73%
+        );
+      }
+
+      h1 {
+        color: #272044;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 50px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 35px;
+        color: #885df1;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+      }
+      button {
+        font-family: "Indie Flower", cursive;
+        border-radius: 10px;
+        margin: 10px auto;
+        display: block;
+        background-color: #d054db;
+        border: 1px solid #885df1;
+        color: #ffffff;
+        font-size: 23px;
+        line-height: 22px;
+        padding: 10px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      button:hover {
+        background-color: #9837a0;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .astro {
+        font-weight: bold;
+        font-size: 26px;
+      }
+
+      .introtext > p {
+        font-size: 23px;
+      }
+      .introtext {
+        font-size: 22px;
+        display: block;
+        text-align: center;
+        margin: 30px;
+        border: rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        padding: 5px 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: rgba(255, 255, 255, 0.317);
+      }
+      .introtext > em {
+        font-size: 22px;
+      }
+      .signature {
+        display: block;
+      }
+      .link {
+        text-decoration: none;
+        font-weight: 1200;
+        color: #0064fb;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Zodiac_%28PSF%29.png/1192px-Zodiac_%28PSF%29.png"
+      width="200"
+      alt="zodiac"
+    />
+    <h1>
+      Do you know your star sign?
+    </h1>
+    <h2>
+      Just enter your birth day and month!
+    </h2>
+
+    <div class="introtext">
+      <p>
+        🔮
+        <br />
+        Your zodiac sign can reveal some aspects about your personality and your
+        approach towards life. <br />
+        You can also discover famous personalities that share your star sign.
+        <br />
+      </p>
+      <button>Let's find out</button>
+    </div>
+
+    <hr />
+    <p class="signature">
+      Made with 💙 by
+      <a
+        href="https://www.linkedin.com/in/sofia-simoes-ms/"
+        target="_blank"
+        class="link"
+        ><strong> Sofia Simões</strong></a
+      >
+      | Learn more about
+      <a href="https://www.shecodes.io/" target="_blank" class="link">
+        SheCodes</a
+      >
+      👩‍💻
+    </p>
+
+    <script>
+      function birthDate() {
+        let monthBirth = prompt(
+          `What month were you born in? (answer from 1 to 12)`
+        );
+        let dayBirth = prompt(
+          `What day were you born in? (answer from 1 to 31)`
+        );
+        let changeParagraph = document.querySelector(".introtext");
+
+        function signCapricorn() {
+          changeParagraph.innerHTML = `♑️
+                  <br />
+                  <span class='astro'> You're a Capricorn!</span> <br />
+                  <em>You were born between December 22nd and January 19th.</em>
+                  <br /> <br />
+                  Capricorn natives are often described as tenacious, conservative, resourceful, disciplined and ambitious.`;
+        }
+        function signAquarius() {
+          changeParagraph.innerHTML = `♒️
+                  <br />
+                  <span class='astro'> You're an Aquarius!</span> <br />
+                  <em>You were born between January 20th and February 18th.</em>
+                  <br /><br />
+                  Aquarius natives are often described as independent, inventive, eccentric, intellectual and idealistic.`;
+        }
+        function signPisces() {
+          changeParagraph.innerHTML = `♓️
+                  <br />
+                  <span class='astro'> You're a Pisces!</span> <br />
+                  <em>You were born between February 19th and March 20th.</em>
+                  <br /><br />
+                  Pisces natives are often described as intuitive, dreamy, artistic, sensitive and compassionate.`;
+        }
+        function signAries() {
+          changeParagraph.innerHTML = `♈️
+                  <br />
+                  <span class='astro'> You're an Aries!</span> <br />
+                  <em>You were born between March 21th and April 19th.</em>
+                  <br /><br />
+                  Aries natives are often described as active, independent, impatient, and energetic.`;
+        }
+        function signTaurus() {
+          changeParagraph.innerHTML = `♉️
+                  <br />
+                  <span class='astro'> You're a Taurus!</span> <br />
+                  <em>You were born between April 20th and May 20th.</em>
+                  <br /><br />
+                  Taurus natives are often described as persevering, down-to-earth, stable, stubborn, possessive and dependable.`;
+        }
+        function signGemini() {
+          changeParagraph.innerHTML = `♊️
+                  <br />
+                  <span class='astro'> You're a Gemini!</span> <br />
+                  <em>You were born between May 21st and June 20th.</em>
+                  <br /><br />
+                  Gemini natives are often described as talkative, mental, adaptable, flexible, changeable and sociable.`;
+        }
+        function signCancer() {
+          changeParagraph.innerHTML = `♋️
+                  <br />
+                  <span class='astro'> You're a Cancer!</span> <br />
+                  <em>You were born between June 21st and July 22nd.</em>
+                  <br /><br />
+                  Cancer natives are often described as gentle, conservative, feeling, nurturing, defensive and contemplative.`;
+        }
+        function signLeo() {
+          changeParagraph.innerHTML = `♌️
+                  <br />
+                  <span class='astro'> You're a Leo!</span> <br />
+                  <em>You were born between July 23rd and August 22nd.</em>
+                  <br /><br />
+                  Leo natives are often described as magnanimous, generous, hospitable, caring, warm, authoritative and active.`;
+        }
+        function signVirgo() {
+          changeParagraph.innerHTML = `♍️
+                  <br />
+                  <span class='astro'> You're a Virgo!</span> <br />
+                  <em>You were born between August 23rd and September 22nd.</em>
+                  <br /><br />
+                  Virgo natives are often described as analytical, intelligent, reserved, helpful and conscientious.`;
+        }
+        function signLibra() {
+          changeParagraph.innerHTML = `♎️
+                  <br />
+                  <span class='astro'> You're a Libra!</span> <br />
+                  <em>You were born between September 23rd and October 22nd.</em>
+                  <br /><br />
+                  Libra natives are often described as just, sociable, kind, diplomatic, indecisive, and artistic.`;
+        }
+        function signScorpio() {
+          changeParagraph.innerHTML = `♏️
+                  <br />
+                  <span class='astro'> You're a Scorpio!</span> <br />
+                  <em>You were born between October 23rd and November 21st.</em>
+                  <br /><br />
+                  Scorpio natives are often described as passionate, perceptive, resourceful, determined and focused.`;
+        }
+        function signSagittarius() {
+          changeParagraph.innerHTML = `♐️
+                  <br />
+                  <span class='astro'> You're a Sagittarius!</span> <br />
+                  <em>You were born between November 22nd and December 21st.</em>
+                  <br /><br />
+                  Sagittarius natives are often described as passionate, perceptive, resourceful, determined and focused.`;
+        }
+
+        if (monthBirth == 1) {
+          if (dayBirth >= 1 && dayBirth <= 19) {
+            signCapricorn();
+          } else if (dayBirth > 19 && dayBirth <= 31) {
+            signAquarius();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 2) {
+          if (dayBirth >= 1 && dayBirth <= 18) {
+            signAquarius();
+          } else if (dayBirth > 18 && dayBirth <= 29) {
+            signPisces();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 3) {
+          if (dayBirth >= 1 && dayBirth <= 20) {
+            signPisces();
+          } else if (dayBirth > 20 && dayBirth <= 31) {
+            signAries();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 4) {
+          if (dayBirth >= 1 && dayBirth <= 19) {
+            signAries();
+          } else if (dayBirth > 19 && dayBirth <= 30) {
+            signTaurus();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 5) {
+          if (dayBirth >= 1 && dayBirth <= 20) {
+            signTaurus();
+          } else if (dayBirth > 20 && dayBirth <= 31) {
+            signGemini();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 6) {
+          if (dayBirth >= 1 && dayBirth <= 20) {
+            signGemini();
+          } else if (dayBirth > 20 && dayBirth <= 30) {
+            signCancer();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 7) {
+          if (dayBirth >= 1 && dayBirth <= 22) {
+            signCancer();
+          } else if (dayBirth > 22 && dayBirth <= 31) {
+            signLeo();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 8) {
+          if (dayBirth >= 1 && dayBirth <= 22) {
+            signLeo();
+          } else if (dayBirth > 22 && dayBirth <= 31) {
+            signVirgo();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 9) {
+          if (dayBirth >= 1 && dayBirth <= 22) {
+            signVirgo();
+          } else if (dayBirth > 22 && dayBirth <= 30) {
+            signLibra();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 10) {
+          if (dayBirth >= 1 && dayBirth <= 22) {
+            signLibra();
+          } else if (dayBirth > 22 && dayBirth <= 31) {
+            signScorpio();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 11) {
+          if (dayBirth >= 1 && dayBirth <= 21) {
+            signScorpio();
+          } else if (dayBirth > 21 && dayBirth <= 30) {
+            signSagittarius();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else if (monthBirth == 12) {
+          if (dayBirth >= 1 && dayBirth <= 21) {
+            signSagittarius();
+          } else if (dayBirth > 21 && dayBirth <= 31) {
+            signCapricorn();
+          } else {
+            alert(`⚠️ Oops, something happened. Please try again 😎`);
+          }
+        } else {
+          alert(`⚠️ Oops, something happened. Please try again 😎`);
+        }
+      }
+
+      let findOut = document
+        .querySelector("button")
+        .addEventListener("click", birthDate);
+    </script>
+  </body>
+</html>
